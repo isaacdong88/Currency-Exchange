@@ -1,0 +1,2 @@
+currency = 'USD'
+print(currency)
