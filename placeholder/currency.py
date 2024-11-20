@@ -1,2 +1,0 @@
-currency = 'USD'
-print(currency)
