@@ -1,4 +1,5 @@
 import requests
+import json
 
 from_currency = input("Convert Currency From: ")
 to_currency = input("Convert Currency To: ")
@@ -15,5 +16,10 @@ headers = {
 }
 
 response = requests.get(url, headers=headers, params=querystring)
+data = json.loads(response.text)
+converted_amount = "{:.2f}".format(data['result'])
 
-print(response.json())
+print(converted_amount)
+
+
+
