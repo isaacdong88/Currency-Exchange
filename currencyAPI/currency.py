@@ -1,12 +1,13 @@
 import requests
 import json
 
-def convert():
+
+def convert(from_currency, to_currency, amount):
     url = "https://currency-converter-pro1.p.rapidapi.com/convert"
 
-    from_currency = input("Convert Currency From: ")
-    to_currency = input("Convert Currency To: ")
-    amount = input("Amount: ")
+    from_currency = from_currency
+    to_currency = to_currency
+    amount = amount
 
 
     querystring = {"from": from_currency, "to": to_currency, "amount": amount}
@@ -20,6 +21,6 @@ def convert():
     data = json.loads(response.text)
     converted_amount = "{:.2f}".format(data['result'])
 
-    print(converted_amount)
+    return converted_amount
 
 
