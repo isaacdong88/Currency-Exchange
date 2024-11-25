@@ -1,5 +1,6 @@
 from tkinter import Tk, ttk
 from tkinter import *
+from currency import convert
 
 window = Tk()
 window.geometry('300x320')
